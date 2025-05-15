@@ -1,0 +1,67 @@
+.upload-data-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.upload-data-page h2 {
+  color: #5A3E9C;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.upload-data-page p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.upload-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.upload-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f6ff;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.file-type,
+.upload-date {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.view-btn {
+  padding: 8px 16px;
+  background-color: #a89bd1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #8c7ac6;
+}

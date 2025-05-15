@@ -1,0 +1,14 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f6ff;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}

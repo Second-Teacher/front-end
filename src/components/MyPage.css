@@ -1,0 +1,195 @@
+.mypage-container {
+  position: relative;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #f3efff; /* 연보라 배경 */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(150, 130, 200, 0.2);
+  text-align: left;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.mypage-container h2 {
+  color: #8c7ac6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.field-row strong {
+  min-width: 80px;
+}
+
+.field-row span {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.field-row input[type="text"],
+.field-row input[type="email"],
+.field-row input[type="password"] {
+  flex: 1;
+  margin-left: 10px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.email-edit {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+  margin-left: 10px;
+}
+
+/* 버튼 스타일 공통 */
+.edit-btn,
+.save-btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #a89bd1; /* 연보라 버튼 */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+  background-color: #8c7ac6; /* hover 시 진한 보라 */
+}
+
+/* 로그아웃 버튼 */
+.logout-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #d18080; /* 연한 붉은 계열 */
+  color: white;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #b65c5c; /* hover 시 더 진한 붉은색 */
+}
+
+/* 계정 삭제 버튼 */
+.delete-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #d32f2f;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* 닫기 버튼 (왼쪽 상단 X버튼) */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: crimson;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff5e5e;
+}
+
+/* 카드 스타일 (선택사항) */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+/* 아바타와 닉네임 */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nickname {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.email {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.warning-text {
+  color: #b71c1c;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+/* ✨ field-group: 입력 필드 한 묶음 정렬용 */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;   /* 묶음 사이 여백 */
+  gap: 6px;              /* label과 input 사이 여백 */
+}
+
+.field-group label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #5A3E9C;
+  margin-bottom: 4px;
+}
+
+.field-group input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}

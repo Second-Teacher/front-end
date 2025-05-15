@@ -1,0 +1,105 @@
+/* 화면 전체에 연보라 배경 적용 */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #F6F2FF;  /* 연보라색 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 컨테이너 */
+.home-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* 상단 로고 */
+.main-logo {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #8C7AC6;
+  margin-bottom: 20px;
+}
+
+/* 설명 + 버튼 묶음 박스 */
+.highlight-box {
+  border: 4px solid #8C7AC6;
+  border-radius: 20px;
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 설명 문장 */
+.main-subtext {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* 로그인/회원가입 버튼 정렬 */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 로그인 버튼 - 보라 배경 */
+.primary-btn {
+  background-color: #8C7AC6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.primary-btn:hover {
+  background-color: #6c4aa9;
+}
+
+/* 회원가입 버튼 - 테두리형 */
+.secondary-btn {
+  background-color: white;
+  color: #8C7AC6;
+  border: 2px solid #8C7AC6;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.secondary-btn:hover {
+  background-color: #f0eaff;
+}
+
+/* 기능 목록 */
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+/* 각 기능 카드 */
+.feature-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+}
+.feature-card h3 {
+  margin-bottom: 10px;
+  color: #5A3E9C;
+}
+.feature-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,261 @@
+/* 전체 배경 */
+.summary-viewer {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f3efff;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* 내부 카드형 컨테이너 */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* 제목 및 설명 */
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------- */
+/* 업로드 영역 - 개선된 버튼 스타일 */
+/* ----------------------------- */
+.upload-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #bba3f3;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-label:hover {
+  background-color: #a78ae3;
+}
+
+.upload-section input[type="file"] {
+  display: none;
+}
+
+/* ----------------------------- */
+/* 공통 버튼 스타일 (보기/선택/편집 등) */
+/* ----------------------------- */
+.button {
+  padding: 10px 20px;
+  background-color: #8c7ac6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button:hover {
+  background-color: #6f61b2;
+  transform: translateY(-1px);
+}
+
+.button.active {
+  background-color: #5a3e9c;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+/* 유형 버튼 묶음 */
+.type-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------- */
+/* 본문 두 칼럼 영역 */
+/* ----------------------------- */
+.content-area {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 왼쪽 요약 목록 */
+.left-panel {
+  flex: 1;
+  background: #f7f7f7;
+  padding: 16px;
+  border-radius: 12px;
+  min-height: 300px;
+  overflow-y: auto;
+}
+
+.summary-item {
+  background: white;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.summary-item:hover {
+  background-color: #f0f0ff;
+}
+
+.summary-item.selected {
+  background: #e0ecff;
+  border-color: #5a3e9c;
+}
+
+/* 오른쪽 본문 표시 */
+.right-panel {
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  white-space: pre-wrap;
+  min-height: 300px;
+}
+
+.right-panel h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.summary-body {
+  margin-top: 10px;
+}
+
+/* 편집 textarea */
+textarea {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  margin-top: 10px;
+  resize: vertical;
+  background-color: #fafafa;
+}
+
+/* 저장/취소 버튼 */
+.summary-body button {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #7e65c1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.summary-body button:hover {
+  background-color: #5a3e9c;
+}
+
+/* 편집 모드 토글 */
+.edit-mode-toggle {
+  margin-top: 20px;
+  color: #5a3e9c;
+  font-weight: bold;
+}
+.filename {
+  margin-left: 12px;
+  font-weight: 500;
+  color: #5a3e9c;
+}
+/* upload.css 최하단에 붙여주세요 */
+
+/* 🔼 홈 버튼 영역 */
+.top-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  padding: 8px 16px;
+  background-color: #d6c6f2;
+  color: #4c3a87;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #bba3f3;
+}
+/* --- 기존 스타일들 --- */
+
+
+/* ✅ 토글 스위치 (보기/편집 모드 전환) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #6a8df2;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* ✅ 파일명 텍스트 */
+.filename {
+  margin-left: 12px;
+  font-weight: 500;
+  color: #5a3e9c;
+}

@@ -1,0 +1,80 @@
+/* src/components/Login.css */
+
+.login-container {
+  position: relative;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #f3efff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(150, 130, 200, 0.2);
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #8c7ac6;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box; /* ✅ 입력창 너비 정확히 맞추기 */
+}
+
+.login-container button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #a89bd1;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box; /* ✅ 버튼 너비 맞추기 */
+}
+
+.login-container button[type="submit"]:hover {
+  background-color: #8c7ac6;
+}
+
+/* X 버튼 스타일 */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a89bd1;
+  font-weight: bold;
+  transition: color 0.2s ease;
+  outline: none;
+  padding: 0;
+}
+
+.close-btn:hover {
+  color: crimson;
+  background: none;
+}
+
+/* 에러 메시지 스타일 */
+.error {
+  color: crimson;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* 비밀번호 일치 성공 메시지 */
+.success {
+  color: green;
+  margin-top: 10px;
+  font-size: 14px;
+}

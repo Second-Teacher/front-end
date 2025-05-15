@@ -1,0 +1,159 @@
+/* 전체 페이지 배경 및 기본 폰트 */
+.user-home {
+  padding: 0px 40px 20px;
+  background-color: #f3efff;
+  font-family: 'Noto Sans KR', sans-serif;
+  min-height: 100vh;
+
+   max-width: 1200px;       /* ✅ 페이지 최대 너비 제한 */
+   margin: 0 auto;           /* ✅ 중앙 정렬 */
+}
+
+/* ✅ 상단 헤더 */
+.header {
+  position: sticky;   /* 또는 fixed 가능 */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: transparent;  /* ✅ 배경 없애기 */
+  box-shadow: none;               /* ✅ 그림자 제거 */
+  border-bottom: none;            /* ✅ 테두리 제거 */
+   margin: 0;
+   margin-bottom: 32px;  /* ✅ 추가: 아래 콘텐츠와의 간격 */
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5A3E9C;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-buttons button {
+  background-color: transparent;
+  border: none;
+  color: #5A3E9C;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.nav-buttons button:hover {
+  text-decoration: underline;
+}
+
+/* ✅ 인사말 박스 */
+.welcome-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin: 50px auto 40px;
+  text-align: center;
+}
+
+.welcome-box h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.welcome-box p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ✅ 기능 카드 그리드 */
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ✅ 줄바꿈 전용 카드 */
+.break-card {
+  flex-basis: 100%;  /* 한 줄 전체 차지 */
+  display: flex;
+  justify-content: center; /* ✅ 가운데 정렬로 카드 크기 유지 */
+}
+
+/* ✅ 카드 스타일 */
+.feature-card {
+  background-color: white;
+  padding: 20px;
+  width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  color: #5A3E9C;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.feature-card button {
+  padding: 8px 14px;
+  background-color: #8C7AC6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feature-card button:hover {
+  background-color: #6c4aa9;
+}
+
+/* 브라우저 기본 여백 제거 */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f3efff;
+}
+.welcome-box {
+  margin-bottom: 40px; /* 첫 feature-grid 위 공간 */
+  text-align: center;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px; /* feature-grid 간의 간격 */
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 280px;
+  text-align: center;
+}
