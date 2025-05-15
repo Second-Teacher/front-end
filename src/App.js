@@ -6,7 +6,7 @@ import Signup from './components/Signup';
 import MyPage from './components/MyPage';
 import UserHome from './components/userhome'; // ✅ 실제 위치 확인 필요
 import Upload from './components/upload';
-import UploadData from './uploaded-data';
+import Uploadeddata from './components/uploaded-data';
 
 
 
@@ -20,7 +20,7 @@ function App() {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/userhome" element={<UserHome />} /> {/* ✅ 로그인 후 홈 */}
         <Route path="/upload" element={<Upload />} />
-        <Route path="/upload-data" element={<UploadData />} />
+        <Route path="/upload-data" element={<Uploadeddata />} />
       </Routes>
     </Router>
   );

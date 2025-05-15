@@ -1,8 +1,8 @@
 // src/pages/upload-data.jsx
 import React from 'react';
-import './upload-data.css';
+import './uploaded-data.css';
 
-function UploadData() {
+function Uploadeddata() {
   // 샘플 데이터 (이후 Firebase 등에서 실제로 받아올 수 있음)
   const uploadedItems = [
     { id: 1, filename: '강의노트1.pdf', type: 'PDF', date: '2024-05-01' },
@@ -30,4 +30,4 @@ function UploadData() {
   );
 }
 
-export default UploadData;
+export default Uploaddata;
