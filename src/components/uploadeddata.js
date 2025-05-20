@@ -1,9 +1,10 @@
-// src/pages/upload-data.jsx
 import React from 'react';
-import './uploaded-data.css';
+import { useNavigate } from 'react-router-dom';
+import './uploadeddata.css';
 
 function Uploadeddata() {
-  // 샘플 데이터 (이후 Firebase 등에서 실제로 받아올 수 있음)
+  const navigate = useNavigate();
+
   const uploadedItems = [
     { id: 1, filename: '강의노트1.pdf', type: 'PDF', date: '2024-05-01' },
     { id: 2, filename: '수업녹음.mp3', type: '음성', date: '2024-05-02' },
@@ -11,6 +12,13 @@ function Uploadeddata() {
 
   return (
     <div className="upload-data-page">
+      {/* ✅ 유저홈으로 버튼 추가 */}
+      <div className="top-nav">
+        <button className="home-button" onClick={() => navigate('/userhome')}>
+          ⬅ 홈으로
+        </button>
+      </div>
+
       <h2>업로드 자료 확인</h2>
       <p>업로드한 PDF 및 음성 자료를 확인하세요.</p>
 
@@ -30,4 +38,4 @@ function Uploadeddata() {
   );
 }
 
-export default Uploaddata;
+export default Uploadeddata;
