@@ -11,7 +11,7 @@
 
 /* ✅ 상단 헤더 */
 .header {
-  position: sticky;   /* 또는 fixed 가능 */
+  position: static;   /* 또는 fixed 가능 */
   top: 0;
   left: 0;
   right: 0;
