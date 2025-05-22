@@ -10,11 +10,12 @@ const SummaryViewer = () => {
   const [editText, setEditText] = useState('');
   const [selectedFileName, setSelectedFileName] = useState('');
 
-  // 요약 목록 불러오기
   const handleLoad = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`/api/summary?type=${selectedType}`);
+      const response = await fetch(`/api/summary?type=${selectedType}`, {
+        credentials: 'include',
+      });
       const data = await response.json();
       setSummaryList(data);
     } catch (e) {
@@ -24,19 +25,18 @@ const SummaryViewer = () => {
     }
   };
 
-  // 항목 선택
   const handleSelect = (summary) => {
     setSelectedSummary(summary);
     setEditText(summary.content);
     setEditMode(false);
   };
 
-  // 저장
   const handleSave = async () => {
     try {
       const res = await fetch(`/api/save`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({
           id: selectedSummary.id,
           content: editText,
@@ -45,7 +45,7 @@ const SummaryViewer = () => {
       if (res.ok) {
         alert('저장 완료');
         setEditMode(false);
-        handleLoad(); // 목록 새로고침
+        handleLoad();
       } else {
         alert('저장 실패');
       }
@@ -54,7 +54,6 @@ const SummaryViewer = () => {
     }
   };
 
-  // 취소
   const handleCancel = () => {
     const confirmCancel = window.confirm('변경사항이 저장되지 않습니다. 취소할까요?');
     if (confirmCancel) {
@@ -63,7 +62,6 @@ const SummaryViewer = () => {
     }
   };
 
-  // 파일 업로드
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -72,16 +70,18 @@ const SummaryViewer = () => {
 
     const formData = new FormData();
     formData.append('file', file);
+    formData.append('type', selectedType); // 📌 중요
 
     try {
-      const res = await fetch('/api/upload', {
+      const res = await fetch('/summary/api/upload', {
         method: 'POST',
         body: formData,
+        credentials: 'include',
       });
 
       if (res.ok) {
         alert('업로드 완료');
-        handleLoad(); // 목록 다시 불러오기
+        handleLoad(); // 목록 새로고침
       } else {
         alert('업로드 실패');
       }
@@ -95,15 +95,15 @@ const SummaryViewer = () => {
     <div className="summary-viewer">
       <div className="container">
         <div className="top-nav">
-        <button className="home-button" onClick={() => window.location.href = '/userhome'}>
-         ⬅ 홈으로
-         </button>
-         </div>
+          <button className="home-button" onClick={() => window.location.href = '/userhome'}>
+            ⬅ 홈으로
+          </button>
+        </div>
 
         <h1>요약 내용 보기</h1>
         <p>저장된 PDF 요약 및 STT 변환 내용을 확인하고 수정할 수 있습니다.</p>
- 
-        {/* 파일 업로드 */}
+
+        {/* 업로드 영역 */}
         <div className="upload-section">
           <label className="upload-label">
             파일 선택
@@ -118,30 +118,21 @@ const SummaryViewer = () => {
               }}
             />
           </label>
-          {selectedFileName && (
-            <span className="filename">{selectedFileName}</span>
-          )}
+          {selectedFileName && <span className="filename">{selectedFileName}</span>}
         </div>
 
-        {/* 유형 선택 버튼 */}
+        {/* 유형 선택 */}
         <div className="type-buttons">
-          <button
-            className={`button ${selectedType === 'pdf' ? 'active' : ''}`}
-            onClick={() => setSelectedType('pdf')}
-          >
+          <button className={`button ${selectedType === 'pdf' ? 'active' : ''}`} onClick={() => setSelectedType('pdf')}>
             PDF 요약 보기
           </button>
-          <button
-            className={`button ${selectedType === 'stt' ? 'active' : ''}`}
-            onClick={() => setSelectedType('stt')}
-          >
-            STT 변환 내용 보기
+          <button className={`button ${selectedType === 'stt' ? 'active' : ''}`} onClick={() => setSelectedType('stt')}>
+            STT 변환 내용 요약 
           </button>
         </div>
 
-        {/* 목록 + 내용 */}
+        {/* 콘텐츠 영역 */}
         <div className="content-area">
-          {/* 좌측 목록 */}
           <div className="left-panel">
             {isLoading ? (
               <p>불러오는 중...</p>
@@ -160,7 +151,6 @@ const SummaryViewer = () => {
             )}
           </div>
 
-          {/* 우측 본문 */}
           <div className="right-panel">
             {!selectedSummary ? (
               <p>항목을 선택하면 내용이 여기에 표시됩니다.</p>
@@ -171,10 +161,7 @@ const SummaryViewer = () => {
                 <div className="summary-body">
                   {editMode ? (
                     <>
-                      <textarea
-                        value={editText}
-                        onChange={(e) => setEditText(e.target.value)}
-                      />
+                      <textarea value={editText} onChange={(e) => setEditText(e.target.value)} />
                       <button onClick={handleSave}>저장하기</button>
                       <button onClick={handleCancel}>취소</button>
                     </>
