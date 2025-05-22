@@ -60,7 +60,7 @@ function UserHome() {
   <div className="feature-card">
     <h3>🎤 음성자료 변환기</h3>
     <p>강의 녹음을 텍스트로 변환해보세요.</p>
-    <button onClick={() => navigate('/voice-to-text')}>음성 변환</button>
+    <button onClick={() => navigate('/VoiceToText')}>음성 변환</button>
   </div>
 </div>
 

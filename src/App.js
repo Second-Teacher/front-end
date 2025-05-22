@@ -7,6 +7,7 @@ import MyPage from './components/MyPage';
 import UserHome from './components/userhome'; // ✅ 실제 위치 확인 필요
 import Upload from './components/upload';
 import Uploadeddata from './components/uploadeddata';
+import VoiceToText from './components/VoiceToText';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/userhome" element={<UserHome />} /> {/* ✅ 로그인 후 홈 */}
         <Route path="/upload" element={<Upload />} />
         <Route path="/uploaded-data" element={<Uploadeddata />} />
+        <Route path="/VoiceToText" element={<VoiceToText />} />
       </Routes>
     </Router>
   );

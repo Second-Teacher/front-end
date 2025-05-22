@@ -1,0 +1,117 @@
+.voice-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  max-width: 600px;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 40px auto;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  padding: 8px 16px;
+  background-color: #d6c6f2;
+  color: #4c3a87;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #bba3f3;
+}
+
+.voice-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5a3e9c;
+  margin-bottom: 8px;
+}
+
+.voice-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.voice-button {
+  background-color: #b49ee8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 8px;
+}
+
+.voice-button:hover {
+  background-color: #a086dc;
+}
+
+.form-group {
+  margin-top: 16px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  color: #5a3e9c;
+}
+
+.text-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.text-area {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  resize: vertical;
+  background-color: #f9f6ff;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+  margin: 8px 0 12px;
+  color: #333;
+  align-items: center;
+}
+
+.radio-group input {
+  margin-right: 4px;
+}
+
+.save-message {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #4caf50; /* 기본: 성공 메시지 색상 */
+}
