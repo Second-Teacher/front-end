@@ -9,6 +9,7 @@ import Upload from './components/upload';
 import Uploadeddata from './components/uploadeddata';
 import VoiceToText from './components/VoiceToText';
 import QuestionGenerator from './components/QuestionGenerator'; // 🔹 컴포넌트 이름 대문자 필수!
+import Exam from './components/Exam';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path="/uploaded-data" element={<Uploadeddata />} />
         <Route path="/VoiceToText" element={<VoiceToText />} />
         <Route path="/generate-quiz" element={<QuestionGenerator />} />
-
+        <Route path="/exam" element={<Exam />} />
       </Routes>
     </Router>
   );

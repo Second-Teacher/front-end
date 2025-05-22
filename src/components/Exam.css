@@ -1,0 +1,46 @@
+.exam-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #f9f6ff;
+  border-radius: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.question-card {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+}
+
+.submit-button {
+  background-color: #a89bd1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.top-nav {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.home-button {
+  padding: 8px 16px;
+  background-color: #d6c6f2;
+  color: #4c3a87;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #bba3f3;
+}
